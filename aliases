@@ -1,0 +1,108 @@
+#List directory contents
+alias sl=ls
+alias ls='ls -G'        # Compact view, show colors
+alias la='ls -AF'       # Compact view, show hidden
+alias ll='ls -al'
+alias l='ls -a'
+alias l1='ls -1'
+
+alias _="sudo"
+
+alias c='clear'
+alias k='clear'
+alias cls='clear'
+
+alias q='exit'
+
+alias ..='cd ..'         # Go up one directory
+alias ...='cd ../..'     # Go up two directories
+alias ....='cd ../../..' # Go up two directories
+alias -- -='cd -'        # Go back
+
+# Shell History
+alias h='history'
+
+# Directory
+alias	md='mkdir -p'
+alias	rd='rmdir'
+
+
+# ///////////////////// #
+# //////// git //////// #
+# ///////////////////// #
+
+alias gcl='git clone'
+alias ga='git add'
+alias gall='git add .'
+alias g='git'
+alias get='git'
+alias gst='git status'
+alias gs='git status'
+alias gss='git status -s'
+alias gl='git pull'
+alias gup='git fetch && git rebase'
+alias gp='git push'
+alias gpo='git push origin'
+alias gdv='git diff -w "$@" | vim -R -'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gci='git commit --interactive'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gcount='git shortlog -sn'
+alias gcp='git cherry-pick'
+alias gco='git checkout'
+alias gexport='git archive --format zip --output'
+alias gdel='git branch -D'
+alias gmu='git fetch origin -v; git fetch upstream -v; git merge upstream/master'
+alias gll='git log --graph --pretty=oneline --abbrev-commit'
+
+case $OSTYPE in
+  linux*)
+    alias gd='git diff | vim -R -'
+    ;;
+  darwin*)
+    alias gd='git diff | mate'
+    ;;
+  darwin*)
+    alias gd='git diff'
+    ;;
+esac
+
+# ///////////////////// #
+# /// Desktop App's /// #
+# ///////////////////// #
+
+alias fireworks="open -a '/Applications/Adobe Fireworks CS3/Adobe Fireworks CS3.app'"
+alias photoshop="open -a '/Applications/Adobe Photoshop CS3/Adobe Photoshop.app'"
+alias preview="open -a '$PREVIEW'"
+alias xcode="open -a '/Developer/Applications/Xcode.app'"
+alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
+alias safari="open -a safari"
+alias firefox="open -a firefox"
+alias chrome="open -a google\ chrome"
+alias chromium="open -a chromium"
+alias dashcode="open -a dashcode"
+alias f='open -a Finder '
+#Cli Sublime
+ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+
+if [ -s /usr/bin/firefox ] ; then
+  unalias firefox
+fi
+
+# ///////////////////// #
+# ///// IP-Address //// #
+# ///////////////////// #
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+
+# ///////////////////// #
+# //// FUN STUF ;D //// #
+# ///////////////////// #
+# Stuff I never really use but cannot delete either because of http://xkcd.com/530/
+alias stfu="osascript -e 'set volume output muted true'"
+alias pumpitup="osascript -e 'set volume 10'"
+alias wtf="say -v Alex What the fuck"
