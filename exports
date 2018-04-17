@@ -1,0 +1,30 @@
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export ANDROID_TOOLS=$ANDROID_HOME/tools
+export ANDROID_PLATFORM=$ANDROID_HOME/platform-tools
+
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/Cellar/go/1.6/libexec/
+export DYLD_LIBRARY_PATH=/usr/local/opt/openssl/lib/
+
+export USER_BIN=/usr/local/bin/
+export PATH=$USER_BIN:$PATH
+export DOT_NET_HOME=/usr/local/share/dotnet
+
+export FLUTTER_HOME=$HOME/Development/github/flutter/bin
+
+export ANACONDA3_HOME=/usr/local/opt/anaconda3/bin
+
+PATH=$PATH:$ANDROID_PLATFORM
+PATH=$PATH:$ANDROID_TOOLS
+PATH=$PATH:$ANDROID_HOME
+PATH=$PATH:$DOT_NET_HOME
+PATH=$PATH:$FLUTTER_HOME
+PATH=$PATH:$ANACONDA3_HOME
+
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+export RUBY_HOME=$HOME/.gem/ruby/2.0.0/
+export PATH=$RUBY_HOME/bin:$PATH
+export GIT_EDITOR=nano
+export VSCODE_TSJS=1
+export JAVA7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/
